@@ -4,12 +4,11 @@ export default function Hero() {
       <h1 className="font-semibold text-[200%] leading-tight text-slate-800 dark:text-white">
         Let Me Bring Your Projects To Life!
       </h1>
-      <a
-        href="#"
+      <button
         className="absolute bottom-4 right-4 px-5 py-3 rounded-xl bg-purple-800 text-white font-semibold hover:bg-purple-700 transition-all cursor-pointer"
       >
         Let&apos;s talk! 👋
-      </a>
+      </button>
     </div>
   )
 }

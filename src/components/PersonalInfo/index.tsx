@@ -55,8 +55,7 @@ export default function PersonalInfo() {
         <div className="rounded-xl px-6 flex flex-row items-center justify-between bg-gray-100 dark:bg-slate-800 shadow-md shadow-slate-300 dark:shadow-slate-950/25">
           <a
             className="p-4 rounded-xl  bg-gray-200 hover:bg-gray-300 dark:bg-slate-700 dark:hover:bg-slate-600 transition-all cursor-pointer"
-            href=""
-            target="_blank"
+            href="#"
           >
             <FileIcon className="text-slate-700 dark:text-white" />
           </a>
@@ -77,7 +76,6 @@ export default function PersonalInfo() {
           <a
             className="p-4 rounded-xl  bg-gray-200 hover:bg-gray-300 dark:bg-slate-700 dark:hover:bg-slate-600 transition-all cursor-pointer"
             href="mailto:leopoldinodev@gmail.com"
-            target="_blank"
           >
             <MailIcon className="text-slate-700 dark:text-white" />
           </a>

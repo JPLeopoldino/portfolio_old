@@ -12,15 +12,15 @@ export default function Menu() {
 
   return (
     <div className="rounded-xl px-6 flex flex-row items-center justify-between bg-gray-100 dark:bg-slate-800 shadow-md shadow-slate-300 dark:shadow-slate-950/25 row-span-1">
-      <a href="" className="p-1">
-        <ThemeIcon
-          onClick={() => theme == "dark" ? setTheme('light') : setTheme("dark")}
-          className="text-slate-800 dark:text-white cursor-pointer"
-        />
-      </a>
-      <a href="" className="p-1">
+      <button
+        onClick={() => theme == "dark" ? setTheme('light') : setTheme("dark")}
+        className="p-1"
+      >
+        <ThemeIcon className="text-slate-800 dark:text-white cursor-pointer" />
+      </button>
+      <button className="p-1">
         <MenuIcon className="text-slate-800 dark:text-white" />
-      </a>
+      </button>
     </div>
   )
 }
