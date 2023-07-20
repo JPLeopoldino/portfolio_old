@@ -1,3 +1,4 @@
+export { default as CopyIcon } from './copy';
 export { default as FileIcon } from './file';
 export { default as GithubIcon } from './github';
 export { default as LinkedinIcon } from './linkedin';
