@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { CopyIcon } from "@/assets";
+import { Copy } from 'lucide-react';
 
 export default function NameSection() {
   const clearSelection = () => {
@@ -13,19 +13,19 @@ export default function NameSection() {
   };
 
   const onCopyName = () => {
-    navigator.clipboard.writeText("João Pedro Leopoldino");
+    navigator.clipboard.writeText('João Pedro Leopoldino');
     // alert('Copied to Clipboard!');
     setTimeout(clearSelection, 500);
   };
 
   return (
-    <div className="rounded-xl pl-6 pr-3 flex flex-row items-center justify-between bg-gray-100 dark:bg-slate-800 shadow-md shadow-slate-300 dark:shadow-slate-950/25">
+    <div className="flex flex-row items-center justify-between rounded-xl bg-gray-100 pl-6 pr-3 shadow-md shadow-slate-300 dark:bg-slate-800 dark:shadow-slate-950/25">
       <p className="text-sm font-normal text-slate-800 dark:text-white">Name</p>
       <button
-        className="rounded-md px-3 flex flex-row items-center gap-2 text-slate-800 dark:text-white active:opacity-50 transition-all"
+        className="flex flex-row items-center gap-2 rounded-md px-3 text-slate-800 transition-all active:opacity-50 dark:text-white"
         onClick={onCopyName}
       >
-        <CopyIcon width={16} height={16} className="opacity-30" />
+        <Copy width={16} height={16} className="opacity-30" />
         <b className="text-lg font-bold">João Pedro Leopoldino</b>
       </button>
     </div>
