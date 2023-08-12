@@ -1,6 +1,15 @@
-export default function About() {
+import { ComponentProps } from 'react';
+import { twMerge } from 'tailwind-merge';
+
+export default function About({ className, ...rest }: ComponentProps<'div'>) {
   return (
-    <div className="rounded-2xl p-8 flex flex-col items-start justify-between bg-gray-100 dark:bg-slate-800 shadow-md shadow-slate-300 dark:shadow-slate-950/25 col-span-4">
+    <div
+      className={twMerge(
+        'flex flex-col items-start justify-between rounded-2xl bg-gray-100 p-8 shadow-md shadow-slate-300 dark:bg-slate-800 dark:shadow-slate-950/25',
+        className
+      )}
+      {...rest}
+    >
       <h4 className="text-slate-800 dark:text-white">About</h4>
       <p className="text-slate-800 dark:text-white">
         Experienced developer with 4+ years of experience, passionate about

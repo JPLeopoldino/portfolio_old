@@ -1,8 +1,13 @@
 'use client';
 
 import { Copy } from 'lucide-react';
+import { ComponentProps } from 'react';
+import { twMerge } from 'tailwind-merge';
 
-export default function NameSection() {
+export default function NameSection({
+  className,
+  ...rest
+}: ComponentProps<'div'>) {
   const clearSelection = () => {
     if (window.getSelection) {
       window.getSelection()?.removeAllRanges();
@@ -19,14 +24,24 @@ export default function NameSection() {
   };
 
   return (
-    <div className="flex flex-row items-center justify-between rounded-xl bg-gray-100 pl-6 pr-3 shadow-md shadow-slate-300 dark:bg-slate-800 dark:shadow-slate-950/25">
-      <p className="text-sm font-normal text-slate-800 dark:text-white">Name</p>
+    <div
+      className={twMerge(
+        'flex flex-col items-start justify-center gap-2 rounded-xl bg-gray-100 px-3 py-2 shadow-md shadow-slate-300 dark:bg-slate-800 dark:shadow-slate-950/25 md:flex-row md:items-center md:justify-between',
+        className
+      )}
+      {...rest}
+    >
+      <p className="ml-3 text-[0.65rem] font-normal text-slate-800 dark:text-white sm:text-xs md:text-sm">
+        Name
+      </p>
       <button
         className="flex flex-row items-center gap-2 rounded-md px-3 text-slate-800 transition-all active:opacity-50 dark:text-white"
         onClick={onCopyName}
       >
-        <Copy width={16} height={16} className="opacity-30" />
-        <b className="text-lg font-bold">João Pedro Leopoldino</b>
+        <Copy className="h-auto w-4 opacity-20" />
+        <b className="text-xs font-bold leading-tight sm:text-sm md:text-base lg:text-lg">
+          João Pedro Leopoldino
+        </b>
       </button>
     </div>
   );
